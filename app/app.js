@@ -12,7 +12,7 @@ app.set("views","./src/views");     // 두번째 파람 폴더
 app.set("view engine", "ejs");  // view 엔진 선택
 
 app.use("/", home);  // use -> 미들 웨어를 등록해주는 메서드. 루트로 들어오면 home으로 보내준다
-
+app.use(express.static(`${__dirname}/src/public`));
 
 // app.get('/user/:id', (req, res) => {
 //     // const q = req.params;
