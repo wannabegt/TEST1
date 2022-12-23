@@ -15,9 +15,9 @@ const output = {
 };
 
 const process = {
-    login: (req, res)=>{
+    login: async (req, res)=>{
         const user = new User(req.body);    // User 클래스를 user로 인스턴스화
-        const response = user.login();
+        const response = await user.login();
         return res.json(response);
     },
     register: (req, res) => {
