@@ -15,7 +15,7 @@ function register(){
     console.log(confirmPsword);
     if(!id.value) return alert("아이디 입력!");
 
-    if(psword !== confirmPsword ) return alert("비밀번호 불일치!!");
+    if(psword.value !== confirmPsword.value ) return alert("비밀번호 불일치!!");
     
     const req ={
         id : id.value,
