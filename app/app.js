@@ -2,6 +2,8 @@
 const express = require("express");
 var cors = require('cors');
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
+dotenv.config();
 const app = express();
 app.use(cors());
 // const port = 3000;
