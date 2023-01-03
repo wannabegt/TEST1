@@ -11,8 +11,7 @@ const id = document.querySelector("#id"),
 registerBtn.addEventListener("click", register);
 
 function register(){
-    console.log(psword);
-    console.log(confirmPsword);
+
     if(!id.value) return alert("아이디 입력!");
 
     if(psword.value !== confirmPsword.value ) return alert("비밀번호 불일치!!");
@@ -37,6 +36,7 @@ function register(){
         if(res.success){
             location.href="/login";
         }else{
+            if(res.err) return alert(res.err);
             alert(res.msg);
         }
     })
